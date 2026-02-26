@@ -50,6 +50,19 @@
                 </ul>
             </nav>
 
+            <!-- Role Indicator -->
+            <div class="px-4 pb-6">
+                <div class="bg-slate-800/60 rounded-2xl p-4 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">
+                        Masuk sebagai
+                    </p>
+
+                    <p class="text-base font-semibold text-white">
+                        {{ auth()->user()->role ?? 'User' }}
+                    </p>
+                </div>
+            </div>
+
             <!-- Footer Sidebar -->
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 text-center">
                 © {{ date('Y') }} Stockify
@@ -67,7 +80,9 @@
                 <div>
                     <h1 class="text-base font-semibold text-gray-700 tracking-wide">
                         Welcome back,
-                        <span class="text-indigo-600">Staff</span>
+                        <span class="text-indigo-600">
+                            {{ auth()->user()->name ?? 'User' }}
+                        </span>
                     </h1>
                 </div>
 
