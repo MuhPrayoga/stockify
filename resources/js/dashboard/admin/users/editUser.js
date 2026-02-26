@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const u = result.data;
 
+    document.getElementById("name").value = u.name ?? "";
     document.getElementById("role").value = u.role;
     document.getElementById("is_active").value = u.is_active ? "1" : "0";
 
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             e.preventDefault();
 
             const payload = {
+                name: document.getElementById("name").value,
                 role: document.getElementById("role").value,
                 is_active: document.getElementById("is_active").value === "1",
             };

@@ -40,6 +40,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $validated = $request->validate([
+            'name' => 'required|string|max:255',
             'role' => 'required|in:Admin,Manajer Gudang,Staff Gudang',
             'is_active' => 'sometimes|boolean'
         ]);

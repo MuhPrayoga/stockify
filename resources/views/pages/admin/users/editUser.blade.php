@@ -20,6 +20,17 @@
         <form id="editForm" class="space-y-6">
             <input type="hidden" id="userId" value="{{ $id }}">
 
+            <!-- NAME -->
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    Nama
+                </label>
+                <input type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                    placeholder="Masukkan nama pengguna">
+            </div>
+
             <!-- ROLE -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700 mb-2">
